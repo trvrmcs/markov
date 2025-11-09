@@ -1,0 +1,16 @@
+{
+	"name": "Explorations",
+	"image": "mcr.microsoft.com/devcontainers/python:3.13-trixie",
+	"postCreateCommand": "pip3 install uv",
+	"containerEnv": {
+		"UV_PROJECT_ENVIRONMENT": "/home/vscode/.local/share/virtualenvs/markov"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-toolsai.jupyter",
+				"charliermarsh.ruff"
+			]
+		}
+	}
+}
