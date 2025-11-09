@@ -1,0 +1,25 @@
+<h3> <a href="/{{seed}}">{{seed}}</a></h3>
+
+<div style="display:flex">
+    <div style="padding:6px">
+        <pre>{{text}}</pre>
+        {% for item in links %}
+        {% if show_image %}
+        [<a href=" /{{item}}?show_image=1">{{ item }}</a>]
+        {% else %}
+        [<a href=" /{{item}}">{{ item }}</a>]
+        {% endif %}
+        {% endfor %}
+        <br>
+        {% if show_image %}
+        <a href="/{{seed}}">Hide Image</a>
+        {% else %}
+        <a href="/{{seed}}?show_image=1">Show Image</a>
+        {% endif %}
+    </div>
+    <div style="padding:6px">
+        {% if show_image %}
+        <a href="/image/{{seed}}"> <img src="/image/{{seed}}" /></a>
+        {% endif %}
+    </div>
+</div>
