@@ -9,5 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
-./texts
-./images
+texts/*.txt
+images/
+.DS_Store
+
+scratchpad.ipynb
