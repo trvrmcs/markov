@@ -22,7 +22,7 @@ class WordCounts:
             b,
             c,
         ) = None, None, None
-        for d in words + words[:2]:
+        for d in words + words[:4]:
             if a is not None:
                 assert isinstance(a, str)
                 assert isinstance(b, str)
@@ -119,13 +119,3 @@ DEFAULT_TRANSLATION_TABLE = str.maketrans(
 )
 
 
-# def build(*sources: Path, table: dict | None = None) -> VariableChain:
-#     if table is None:
-#         table = DEFAULT_TRANSLATION_TABLE
-
-#     words = [
-#         word
-#         for source in sources
-#         for word in source.read_text().translate(table).split(" ")
-#     ]
-#     return VariableChain(words, "some seed")
