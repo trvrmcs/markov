@@ -1,7 +1,14 @@
-from markov import hot, cold 
-from fractions import Fraction 
-# Transition matrix
-A = {
+from markov import (
+    hot,
+    cold,
+    InitialProbabilities,
+    TransitionProbabilities,
+    ObservationLikelihoods,
+)
+from fractions import Fraction
+
+
+A: TransitionProbabilities = {
     cold: {
         cold: Fraction(5, 10),
         hot: Fraction(5, 10),
@@ -11,9 +18,8 @@ A = {
         hot: Fraction(6, 10),
     },
 }
-
-# Observation likelihoods
-B = {
+ 
+B: ObservationLikelihoods = {
     cold: {
         1: Fraction(5, 10),
         2: Fraction(4, 10),
@@ -28,4 +34,4 @@ B = {
 
 # Initial state probabilities
 
-PI = {cold: Fraction(2, 10), hot: Fraction(8, 10)}
+PI: InitialProbabilities = {cold: Fraction(2, 10), hot: Fraction(8, 10)}
